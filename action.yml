@@ -1,0 +1,12 @@
+name: RunDocs checkout
+description: Build with GitHub Pages and test rendered HTML files
+branding:
+  icon: check-circle
+  color: green
+runs:
+  using: docker
+  image: docker://rundocs/checkout:latest
+inputs:
+  token:
+    default: ${{ github.token }}
+    description: Your GitHub token, No additional settings
